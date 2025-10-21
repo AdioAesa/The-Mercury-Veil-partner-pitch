@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mercury Veil - UK Production Partnership Proposal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cormorant Garamond', serif; background: #0a0a0a; color: #c0c0c0; line-height: 1.7; }
+        .deck-container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .page { background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid rgba(201,169,97,0.2); padding: 60px 50px; margin-bottom: 40px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.5); page-break-after: always; }
+        .page-number { position: absolute; bottom: 20px; right: 50px; font-size: 11pt; color: rgba(192,192,192,0.4); }
+        .footer { position: absolute; bottom: 20px; left: 50px; font-size: 9pt; color: rgba(192,192,192,0.3); }
+        .title-page { text-align: center; padding: 100px 50px; min-height: 600px; display: flex; flex-direction: column; justify-content: center; }
+        .main-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 80pt; color: #f5f5f0; line-height: 0.85; margin-bottom: 40px; text-shadow: 0 0 60px rgba(0,0,0,0.8); }
+        .mercury-shimmer { background: linear-gradient(90deg, #909090, #e8e8e8, #b0b0b0, #e8e8e8, #909090); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s ease-in-out infinite; }
+        @keyframes shimmer { 0%, 100% { background-position: 0% center; } 50% { background-position: 100% center; } }
+        .subtitle { font-size: 18pt; color: #c9a961; letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 25px; font-weight: 400; }
+        .doc-type { font-size: 14pt; color: #c0c0c0; margin-bottom: 20px; font-weight: 300; }
+        .byline { font-size: 13pt; color: #e8e8e8; margin: 40px 0; line-height: 1.6; }
+        .company-info { font-size: 11pt; color: #b0b0b0; line-height: 1.8; margin-top: 50px; }
+        .section-header { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 38pt; color: #f5f5f0; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 2px solid #c9a961; }
+        .section-subheader { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20pt; color: #c9a961; margin: 35px 0 18px; }
+        .body-text { font-size: 12pt; line-height: 1.8; color: #c0c0c0; margin-bottom: 18px; text-align: justify; }
+        .body-text strong { color: #e8e8e8; font-weight: 600; }
+        .body-text em { color: #c9a961; font-style: italic; }
+        .highlight-box { background: linear-gradient(135deg, rgba(201,169,97,0.1) 0%, rgba(201,169,97,0.02) 100%); border-left: 4px solid #c9a961; padding: 25px; margin: 25px 0; }
+        .bullet-list { margin: 20px 0 20px 30px; line-height: 2; }
+        .bullet-list li { font-size: 11.5pt; color: #c0c0c0; margin-bottom: 12px; position: relative; padding-left: 18px; }
+        .bullet-list li::before { content: "▸"; position: absolute; left: 0; color: #c9a961; font-size: 14pt; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 35px 0; }
+        .stat-box { background: rgba(26,26,26,0.8); border: 1px solid rgba(201,169,97,0.3); padding: 30px 20px; text-align: center; }
+        .stat-number { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32pt; color: #c9a961; display: block; margin-bottom: 10px; }
+        .stat-label { font-size: 9.5pt; color: #b0b0b0; text-transform: uppercase; letter-spacing: 0.12em; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        .data-table th { font-weight: 600; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 15px 12px; text-align: left; border-bottom: 2px solid #c9a961; color: #c9a961; background: rgba(201,169,97,0.05); }
+        .data-table td { font-size: 11pt; padding: 15px 12px; border-bottom: 1px solid rgba(192,192,192,0.08); color: #c0c0c0; }
+        .data-table tr:hover { background: rgba(201,169,97,0.03); }
+        .data-table .highlight-row { background: rgba(201,169,97,0.12); font-weight: 600; color: #e8e8e8; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
+        .col-box { background: rgba(26,26,26,0.5); border: 1px solid rgba(201,169,97,0.15); padding: 25px; }
+        .col-box h4 { font-family: 'Playfair Display', serif; font-size: 16pt; color: #c9a961; margin-bottom: 15px; }
+        .contact-box { background: linear-gradient(135deg, #c9a961 0%, #b8975a 100%); color: #1a1a1a; padding: 40px; text-align: center; border-radius: 8px; margin-top: 40px; }
+        .contact-box h3 { font-size: 2em; margin-bottom: 10px; }
+        .contact-item { font-size: 1.2em; margin: 10px 0; }
+        @media (max-width: 768px) { .main-title { font-size: 48pt; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="deck-container">
+
+<!-- PAGE 1: TITLE -->
+<div class="page title-page">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <img src="IMG_2099.jpeg" alt="The Mercury Veil" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.7);">
+    </div>
+    <h1 class="main-title">THE<br><span class="mercury-shimmer">MERCURY</span><br>VEIL</h1>
+    <p class="subtitle">The Mad Hatter Origin Story</p>
+    <p class="doc-type">UK Production Partnership Proposal</p>
+    <p class="byline">Written by and Starring<br><strong style="color: #c9a961; font-size: 15pt;">AYLA DEMIRCI</strong></p>
+    <div class="company-info"><strong>Reelsage LLC</strong><br>Nashville, Tennessee, USA<br><br>WGA East Registration #I381100<br>Registered: October 13, 2025<br><br>aylamahree@gmail.com • (615) 485-5008</div>
+</div>
+
+<!-- PAGE 2: THE STORY -->
+<div class="page">
+    <h2 class="section-header">The Story</h2>
+    <div class="highlight-box">
+        <p class="body-text" style="font-size: 13pt; text-align: center; color: #e8e8e8;"><strong>London, 1827.</strong> When isolated milk maid Clara Stone befriends perfectionist hatter Malcolm Ross, their connection becomes the first genuine tenderness in his solitary life—even as the mercury poisoning from his craft drags them both toward tragedy, birthing literature's most infamous madman.</p>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="malcomsshop (1).jpeg" alt="Malcolm's Workshop" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <p class="body-text"><em>The Mercury Veil</em> is the untold origin story of the Mad Hatter—before the tea party, before the rabbit hole, before Wonderland. This is the <strong>true horror</strong> that inspired Lewis Carroll's most unforgettable character.</p>
+    <h3 class="section-subheader">Based on Real History</h3>
+    <p class="body-text">Between 1820 and 1940, <strong>thousands of hatters died from mercury poisoning</strong>—a slow, invisible death from the very craft that fed them. The phrase <em>"mad as a hatter"</em> comes from their suffering: trembling hands, paranoid delusions, and violent psychosis caused by daily exposure to mercury nitrate used in felt treatment.</p>
+    <p class="body-text">Mercury use in hat-making was not banned in the United States until 1941. <strong>In Britain, it was never officially banned</strong>—phasing out in the 1960s only when hats fell out of fashion. This systemic indifference to worker safety echoes into our present day.</p>
+    <h3 class="section-subheader">The Narrative</h3>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="throughtheglass.jpeg" alt="Through the Glass" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <p class="body-text">Malcolm Ross, 28, is a perfectionist hatter whose obsessive pursuit of the perfect hat slowly poisons him. He navigates London's markets and workshops, surrounded by vendors and fellow craftsmen—but lives in profound emotional isolation.</p>
+    <p class="body-text">Clara Stone, 26, is an orphaned milk maid delivering her rounds through fog-shrouded London at dawn. When she notices Malcolm's deteriorating condition, she offers something no one else has: genuine care. For the first time, Malcolm is truly seen.</p>
+    <p class="body-text">As Malcolm's mercury poisoning advances—trembling hands, memory loss, paranoid hallucinations—their bond deepens. But Clara's prolonged exposure to his mercury-saturated workshop poisons her too. Malcolm's final descent into madness becomes Clara's tragedy: he strangles her in a delusional attempt to "save" her from the mercury he believes is in her blood.</p>
+    <p class="body-text">The film ends one year later: Malcolm has died in Bedlam Asylum, forgotten. Clara's cottage sits empty. And in the London fur market, a young hatter purchases two bottles of mercury solution from the ever-smiling merchant Cheshire. <strong>The cycle continues.</strong></p>
+    <div class="page-number">2</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 3: MARKET OPPORTUNITY -->
+<div class="page">
+    <h2 class="section-header">Market Opportunity</h2>
+    <h3 class="section-subheader">Why This Film, Why Now</h3>
+    <ul class="bullet-list">
+        <li><strong>500M+ Global Alice in Wonderland Fans</strong> — Built-in audience seeking fresh takes on beloved IP</li>
+        <li><strong>Public Domain Advantage</strong> — Zero rights costs, maximum creative freedom, sequel/remake potential</li>
+        <li><strong>True Crime Appeal</strong> — Real historical tragedy attracts documentary/true crime audience</li>
+        <li><strong>Worker Exploitation Resonance</strong> — Georgian-era "gig economy" mirrors modern precarious labor</li>
+        <li><strong>Environmental Toxin Parallels</strong> — Mercury poisoning then = chemical exposure crisis now</li>
+        <li><strong>Writer/Actress Model</strong> — Phoebe Waller-Bridge, Michaela Coel success demonstrates market appetite</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="nos.jpg" alt="The Mercury Veil Atmosphere" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Target Audience</h3>
+    <div class="stats-grid">
+        <div class="stat-box"><span class="stat-number">18-45</span><span class="stat-label">Core Demo</span></div>
+        <div class="stat-box"><span class="stat-number">60%</span><span class="stat-label">Female Skew</span></div>
+        <div class="stat-box"><span class="stat-number">A24</span><span class="stat-label">Aesthetic</span></div>
+        <div class="stat-box"><span class="stat-number">Global</span><span class="stat-label">Appeal</span></div>
+    </div>
+    <ul class="bullet-list">
+        <li>Alice in Wonderland enthusiasts (literary/fantasy fans)</li>
+        <li>Period drama audience (<em>The Favourite</em>, <em>Lady Macbeth</em>)</li>
+        <li>Elevated horror fans (A24, Neon, IFC Midnight)</li>
+        <li>True crime / dark history buffs</li>
+        <li>Awards season prestige viewers</li>
+        <li>Arthouse / festival cinema patrons</li>
+    </ul>
+    <h3 class="section-subheader">Why UK Production is Essential</h3>
+    <ul class="bullet-list">
+        <li><strong>Historical Authenticity</strong> — Period London architecture (Georgian/Regency era), Yorkshire countryside, authentic locations</li>
+        <li><strong>UK Tax Relief</strong> — 25% cash rebate significantly reduces net production cost ($700K on $2.8M budget)</li>
+        <li><strong>Local Expertise</strong> — UK crews specialize in period production (costumes, design, historical accuracy)</li>
+        <li><strong>Cost Efficiency</strong> — Yorkshire shooting 40% cheaper than London while maintaining authenticity</li>
+        <li><strong>Festival Access</strong> — UK co-production status opens BFI London Film Festival, Edinburgh, UK film funds</li>
+        <li><strong>Distribution Advantage</strong> — UK production companies have established specialty distributor relationships</li>
+    </ul>
+    <div class="page-number">3</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 4: COMPARABLE FILMS -->
+<div class="page">
+    <h2 class="section-header">Comparable Films</h2>
+    <p class="body-text">Recent period psychological horror/dramas demonstrate consistent profitability at similar budget levels. All comparables selected for: <strong>(1) Budget range $1-5M</strong>, <strong>(2) Period setting</strong>, <strong>(3) Psychological/horror elements</strong>, <strong>(4) Released 2015-2024</strong>.</p>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="thewitch1.jpg" alt="The Witch" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <table class="data-table">
+        <thead>
+            <tr><th>Film (Year)</th><th>Budget</th><th>Box Office</th><th>ROI</th><th>Distribution</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>The Witch</strong> (2015)</td><td>$4.0M</td><td>$40.4M</td><td>10.1x</td><td>A24</td></tr>
+            <tr><td><strong>Lady Macbeth</strong> (2016)</td><td>$1.5M</td><td>$7.0M+</td><td>4.7x</td><td>Roadside Attractions</td></tr>
+            <tr><td><strong>The Vigil</strong> (2019)</td><td>$1.0M</td><td>$3.0M</td><td>3.0x</td><td>IFC Midnight</td></tr>
+            <tr><td><strong>Saint Maud</strong> (2019)</td><td>$1.8M</td><td>$3.2M+</td><td>1.8x</td><td>A24 + Streaming</td></tr>
+            <tr><td><strong>Relic</strong> (2020)</td><td>$3.0M</td><td>N/A</td><td>Profitable</td><td>IFC Midnight</td></tr>
+            <tr><td><strong>His House</strong> (2020)</td><td>$4.5M</td><td>N/A</td><td>Profitable</td><td>Netflix (~$12M acquisition)</td></tr>
+            <tr class="highlight-row"><td><strong>The Mercury Veil</strong> (Projected)</td><td>$2.5-3.0M</td><td>$8-12M</td><td>2.7-4.8x</td><td>Festival → Specialty</td></tr>
+        </tbody>
+    </table>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="IMG_8070 (1).jpeg" alt="Comparable Films" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div class="highlight-box">
+        <p class="body-text" style="text-align: center; font-size: 12pt; color: #e8e8e8;"><strong>Our conservative projection of 2.9-4.3x ROI</strong> is well below outliers like <em>The Witch</em> (10x) and in line with recent comparable successes. Even at the low end ($8M worldwide), the film generates significant profit after recouping UK tax relief.</p>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="Image (1).jpeg" alt="Comparable Films Reference" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="Image (2).jpeg" alt="Comparable Films Reference" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="IMG_3131.jpeg" alt="Comparable Films Reference" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="IMG_1805 (1).jpeg" alt="Comparable Films Reference" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <p class="body-text" style="margin-top: 25px;"><strong>Note:</strong> We have <em>not</em> compared to large-budget studio films like <em>Sweeney Todd</em> ($50M, Tim Burton, Johnny Depp) or <em>Joker</em> ($55M, Todd Phillips, Joaquin Phoenix). While those prove audience appetite for dark period character studies, they are not realistic financial comparisons for indie production.</p>
+    <div class="page-number">4</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 5: THE PACKAGE - SCREENPLAY -->
+<div class="page">
+    <h2 class="section-header">The Package</h2>
+    <h3 class="section-subheader">1. The Screenplay</h3>
+    <div class="stats-grid">
+        <div class="stat-box"><span class="stat-number">122</span><span class="stat-label">Pages</span></div>
+        <div class="stat-box"><span class="stat-number">WGA</span><span class="stat-label">Registered</span></div>
+        <div class="stat-box"><span class="stat-number">UK</span><span class="stat-label">Screenplay Comps</span></div>
+        <div class="stat-box"><span class="stat-number">Final</span><span class="stat-label">Draft Status</span></div>
+    </div>
+    <p class="body-text"><em>The Mercury Veil</em> is a completed, registered screenplay (WGA East #I381100, October 13, 2025) currently submitted to UK screenplay competitions. The script is production-ready pending development notes from festival readers or attached UK producer.</p>
+    <p class="body-text"><strong>Script Strengths:</strong></p>
+    <ul class="bullet-list">
+        <li><strong>Contained Production</strong> — 4-5 primary locations (hat workshop, Clara's cottage, Margaret's honey cottage, London streets, fur market)</li>
+        <li><strong>Manageable Cast</strong> — 2 leads (Malcolm, Clara), 3 supporting (Cheshire, Margaret, Apothecary), minor day-player roles, period-appropriate background</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="chesire.jpeg" alt="Cheshire" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <ul class="bullet-list">
+        <li><strong>Primarily Practical Effects</strong> — Mercury poisoning makeup/deterioration practical; stylized mercury liquid sequences require minimal VFX</li>
+        <li><strong>35-40 Day Shoot</strong> — Realistic schedule for $2.8M budget with efficient planning</li>
+        <li><strong>Winter Atmosphere</strong> — Natural fog, darkness, cold = production design advantages</li>
+        <li><strong>Strong Female Lead</strong> — Clara is complex tragic protagonist (not damsel/savior trope)</li>
+        <li><strong>Awards Potential</strong> — Screenplay, Lead Actor, Lead Actress, Production Design, Costume Design</li>
+    </ul>
+    <div class="highlight-box">
+        <p class="body-text"><strong>What Makes This Script Different:</strong> Most Mad Hatter stories focus on Wonderland whimsy. This is the <em>horror</em> prequel—grounded in real Georgian-era working-class tragedy, with a doomed love story at its center. The mercury poisoning is not metaphor—it's documented history.</p>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="malcom.jpeg" alt="Malcolm" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div class="page-number">5</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 6: THE PACKAGE - WRITER/ACTRESS -->
+<div class="page">
+    <h3 class="section-subheader">2. The Writer/Actress Package</h3>
+    <p class="body-text" style="font-size: 13pt; color: #e8e8e8; margin-bottom: 25px;"><strong>AYLA DEMIRCI</strong> — Writer & Lead Actress (Clara Stone)</p>
+    <p class="body-text">Following the proven model of <strong>Phoebe Waller-Bridge</strong> (<em>Fleabag</em>), <strong>Michaela Coel</strong> (<em>I May Destroy You</em>), and <strong>Lena Dunham</strong> (<em>Girls</em>), Ayla Demirci brings the rare combination of writer's vision and actor's embodiment.</p>
+    <p class="body-text">Ayla wrote <em>The Mercury Veil</em> as a deeply personal exploration of isolation, toxic beauty, and the desperate need for human connection—and created the lead role of Clara Stone specifically for herself. Just as Phoebe Waller-Bridge couldn't imagine anyone else playing Fleabag, Ayla's connection to Clara is <strong>irreplaceable</strong>.</p>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="splitscreen.jpeg" alt="Malcolm and Clara - The Dual Protagonists" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Screen Experience</h3>
+    <p class="body-text"><strong><em>Freak Off</em> (2025, Prime Video) — Lead Role</strong><br>Ayla carries the film as central protagonist, demonstrating her ability to sustain a feature-length performance. Film Threat praised her <em>"rare blend of ferocity and fragility"</em> and <em>"ability to convey profound emotion through subtle gestures"</em>—precisely the qualities Clara demands.</p>
+    <h3 class="section-subheader">Why Ayla as Clara</h3>
+    <ul class="bullet-list">
+        <li><strong>Created the Role</strong> — Intimate understanding of Clara's psychology, motivations, arc</li>
+        <li><strong>Proven on Camera</strong> — Feature lead demonstrates screen presence and endurance</li>
+        <li><strong>Physical Type</strong> — Strong, practical, capable presence (not delicate damsel)</li>
+        <li><strong>Emotional Range</strong> — Proven ability to convey "profound emotion through subtle gestures" (Film Threat)</li>
+        <li><strong>Writer's Insight</strong> — Understands Clara's journey from conception to completion</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="clara.jpeg" alt="Clara" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div class="highlight-box">
+        <p class="body-text">This writer/actress package streamlines production, allowing focus on craft rather than casting logistics. Just as Phoebe Waller-Bridge's intimate understanding of Fleabag elevated that character beyond what any other actress could achieve, Ayla's connection to Clara ensures authenticity at the core of the film.</p>
+    </div>
+    <p class="body-text" style="margin-top: 25px;"><strong>IMDb:</strong> nm14593886<br><strong>Contact:</strong> aylamahree@gmail.com • (615) 485-5008</p>
+    <div class="page-number">6</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 7: WHAT WE'RE SEEKING -->
+<div class="page">
+    <h2 class="section-header">What We're Seeking</h2>
+    <div class="highlight-box">
+        <p class="body-text" style="font-size: 13pt; text-align: center; color: #e8e8e8;"><strong>We are seeking an experienced UK production company</strong> to partner on development and production of <em>The Mercury Veil</em>. We bring the script and lead actress; we seek production expertise, UK crew, and financing structure.</p>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="hatteratmarket.jpeg" alt="The London Hatter Market" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">The Partnership Opportunity</h3>
+    <p class="body-text"><strong>What We Bring:</strong></p>
+    <ul class="bullet-list">
+        <li>Production-ready screenplay (WGA-registered #I381100)</li>
+        <li>Lead actress attached (Ayla Demirci as Clara Stone)</li>
+        <li>Public domain IP with global recognition (Alice in Wonderland)</li>
+        <li>Writer/actress package ensuring creative authenticity</li>
+    </ul>
+    <p class="body-text" style="margin-top: 25px;"><strong>What We Need:</strong></p>
+    <ul class="bullet-list">
+        <li><strong>UK Producer</strong> with feature film credits to package and produce</li>
+        <li><strong>Director</strong> with period drama and/or psychological thriller experience</li>
+        <li><strong>Line Producer</strong> to create detailed budget and schedule</li>
+        <li><strong>UK Crew</strong> (DP, production designer, costume designer, etc.)</li>
+        <li><strong>Financing Structure</strong> leveraging UK tax relief (25% cash rebate)</li>
+        <li><strong>Sales Agent</strong> attachment for festival and distribution strategy</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="milk.jpeg" alt="Clara the Milk Maid" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Ideal Partner Profile</h3>
+    <p class="body-text">We are seeking a UK production company with:</p>
+    <ul class="bullet-list">
+        <li>Track record in period dramas and/or elevated horror ($1-5M budget range)</li>
+        <li>Festival relationships (Venice, Sundance, BFI London, SXSW, etc.)</li>
+        <li>Established sales agent and distributor relationships</li>
+        <li>Experience with UK tax relief and co-production financing</li>
+        <li>Passion for character-driven, socially relevant storytelling</li>
+    </ul>
+    <div class="highlight-box">
+        <p class="body-text"><strong>Target Production Timeline:</strong> Winter 2026/2027 shoot (35-40 days, Yorkshire locations). Winter production maximizes atmospheric authenticity with natural fog and early darkness, though requires efficient scheduling due to limited daylight hours (4pm sunset). The cold and oppressive atmosphere align perfectly with the script's tone. Timeline allows 12+ months for development, packaging, and pre-production, flexible pending partner availability and financing schedule.</p>
+    </div>
+    <div class="page-number">7</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 8: BUDGET OVERVIEW -->
+<div class="page">
+    <h2 class="section-header">Budget Overview</h2>
+    <h3 class="section-subheader">Estimated Production Budget: $2.5-3.0M USD</h3>
+    <p class="body-text">The Mercury Veil is preliminarily estimated at <strong>$2.5-3.0M USD</strong> for optimal production. This estimate is based on comparable films and industry standards, pending detailed line-item budget development with attached UK line producer. The breakdown below uses $2.8M as a working baseline.</p>
+    <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="stat-box"><span class="stat-number">$2.5-3.0M</span><span class="stat-label">Estimated Budget Range</span></div>
+        <div class="stat-box"><span class="stat-number">$2.1M</span><span class="stat-label">Net After UK Tax Relief (est.)</span></div>
+    </div>
+    <div class="highlight-box">
+        <p class="body-text" style="text-align: center;"><strong>UK Tax Relief reduces net production cost by 25%</strong> (approximately $700K cash rebate on $2.8M baseline budget), significantly lowering investor risk and improving ROI potential. Final rebate amount subject to BFI qualification and actual production spend.</p>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="workshopoverlay.jpeg" alt="Workshop Overlay" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Budget Breakdown (Estimated)</h3>
+    <table class="data-table">
+        <thead><tr><th>Category</th><th>Estimated Amount</th><th>% of Budget</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Above-the-Line</strong></td><td>$450,000</td><td>16%</td></tr>
+            <tr><td style="padding-left: 25px;">Director, Producers, Cast, Script</td><td colspan="2" style="font-size: 10pt; color: #b0b0b0;">Malcolm casting budgeted; Clara (Ayla) package</td></tr>
+            <tr><td><strong>Production</strong></td><td>$1,260,000</td><td>45%</td></tr>
+            <tr><td style="padding-left: 25px;">Crew, Equipment, Art, Wardrobe, Locations</td><td colspan="2" style="font-size: 10pt; color: #b0b0b0;">35-40 day shoot, Yorkshire locations</td></tr>
+            <tr><td><strong>Post-Production</strong></td><td>$750,000</td><td>27%</td></tr>
+            <tr><td style="padding-left: 25px;">Edit, VFX, Sound, Music, Color</td><td colspan="2" style="font-size: 10pt; color: #b0b0b0;">Practical mercury effects, minimal VFX</td></tr>
+            <tr><td><strong>Other Costs</strong></td><td>$340,000</td><td>12%</td></tr>
+            <tr><td style="padding-left: 25px;">Insurance, Legal, Contingency</td><td colspan="2" style="font-size: 10pt; color: #b0b0b0;">7% contingency buffer</td></tr>
+            <tr class="highlight-row"><td><strong>TOTAL BUDGET</strong></td><td><strong>$2,800,000</strong></td><td><strong>100%</strong></td></tr>
+        </tbody>
+    </table>
+    <div class="page-number">8</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 9: PRODUCTION ADVANTAGES -->
+<div class="page">
+    <h2 class="section-header">Production Advantages</h2>
+    <h3 class="section-subheader">Why This Film is Producible at $2.8M</h3>
+    <div class="two-col">
+        <div class="col-box">
+            <h4>Creative Efficiencies</h4>
+            <ul class="bullet-list" style="margin-left: 10px;">
+                <li>Contained locations (4-5 primary sets)</li>
+                <li>Small cast (2 leads, 3 supporting, day players)</li>
+                <li>Primarily practical effects (minimal VFX)</li>
+                <li>Winter shoot (atmospheric authenticity)</li>
+                <li>35-40 day realistic schedule</li>
+            </ul>
+        </div>
+        <div class="col-box">
+            <h4>Financial Advantages</h4>
+            <ul class="bullet-list" style="margin-left: 10px;">
+                <li>UK Tax Relief: $700K rebate</li>
+                <li>Yorkshire locations 40% cheaper</li>
+                <li>Writer/actress package included</li>
+                <li>Public domain IP (zero rights costs)</li>
+                <li>No action sequences or stunts</li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="bees.jpeg" alt="Yorkshire Countryside" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Location Strategy</h3>
+    <p class="body-text"><strong>Primary Shooting Location: Yorkshire, England</strong></p>
+    <ul class="bullet-list">
+        <li><strong>Cost Efficiency</strong> — 40% cheaper than London while maintaining period authenticity</li>
+        <li><strong>Period Architecture</strong> — Authentic Georgian/Regency buildings, early 19th century cobblestone streets, countryside</li>
+        <li><strong>Crew Availability</strong> — Experienced local crews from Leeds, York, Sheffield</li>
+        <li><strong>Weather</strong> — Natural fog, overcast skies, cold = production design advantages</li>
+        <li><strong>Film Office Support</strong> — Screen Yorkshire provides location assistance and crew database</li>
+    </ul>
+    <div class="highlight-box">
+        <p class="body-text"><strong>Winter Shoot Essential:</strong> Winter 2026/2027 production maximizes atmospheric authenticity with natural fog and early darkness, though requires efficient scheduling due to limited daylight hours (4pm sunset). The cold and oppressive atmosphere align perfectly with the script's claustrophobic tone, creating production design advantages through natural elements.</p>
+    </div>
+    <div class="page-number">9</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 10: DISTRIBUTION STRATEGY -->
+<div class="page">
+    <h2 class="section-header">Distribution Strategy</h2>
+    <h3 class="section-subheader">Path to Market</h3>
+    <p class="body-text"><strong>Phase 1: Festival Premiere (Months 1-4 post-production)</strong></p>
+    <ul class="bullet-list">
+        <li><strong>Target Festivals:</strong> Venice, Sundance, SXSW, Tribeca, BFI London Film Festival</li>
+        <li><strong>Goal:</strong> Critical acclaim, press coverage, sales agent attention, distributor buzz</li>
+    </ul>
+    <p class="body-text" style="margin-top: 20px;"><strong>Phase 2: Sales Agent Attachment (Months 2-4)</strong></p>
+    <ul class="bullet-list">
+        <li><strong>Target Agents:</strong> Bankside Films, HanWay Films, Protagonist Pictures</li>
+        <li><strong>Expected:</strong> $1-3M in pre-sales and acquisition deals based on festival reception</li>
+    </ul>
+    <p class="body-text" style="margin-top: 20px;"><strong>Phase 3: Theatrical Release (Months 6-9)</strong></p>
+    <ul class="bullet-list">
+        <li><strong>US Target Distributors:</strong> A24, Neon, IFC Midnight, Bleecker Street</li>
+        <li><strong>UK Target Distributors:</strong> BFI Distribution, Curzon, Picturehouse Entertainment</li>
+        <li><strong>Expected Box Office:</strong> $8-12M worldwide (conservative based on comps)</li>
+    </ul>
+    <p class="body-text" style="margin-top: 20px;"><strong>Phase 4: Streaming/VOD (Months 9-12)</strong></p>
+    <ul class="bullet-list">
+        <li><strong>Target Platforms:</strong> Netflix, Shudder, Amazon Prime, Hulu</li>
+        <li><strong>Expected Deal:</strong> $500K-2M streaming acquisition or revenue share</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="foglinnen.jpeg" alt="Fog and Linnen" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <div class="page-number">10</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 11: REVENUE PROJECTIONS -->
+<div class="page">
+    <h2 class="section-header">Revenue Projections</h2>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="The-Witch-Window-Light.jpg" alt="Atmospheric Window Light" style="width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    </div>
+    <h3 class="section-subheader">Conservative Financial Model</h3>
+    <p class="body-text" style="font-size: 10.5pt; color: #b0b0b0; margin-bottom: 20px;"><em>Note: ROI calculations based on estimated $2.8M budget pending line producer validation. Actual returns will vary based on final production costs and market performance.</em></p>
+    <table class="data-table">
+        <thead><tr><th>Revenue Source</th><th>Conservative</th><th>Realistic</th><th>Optimistic</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Theatrical (Worldwide)</strong></td><td>$5.0M</td><td>$8.0M</td><td>$12.0M</td></tr>
+            <tr><td><strong>Streaming Acquisition</strong></td><td>$500K</td><td>$1.2M</td><td>$2.5M</td></tr>
+            <tr><td><strong>International Pre-Sales</strong></td><td>$800K</td><td>$1.5M</td><td>$2.5M</td></tr>
+            <tr><td><strong>TV/Ancillary Rights</strong></td><td>$300K</td><td>$600K</td><td>$1.0M</td></tr>
+            <tr class="highlight-row"><td><strong>TOTAL GROSS REVENUE</strong></td><td><strong>$6.6M</strong></td><td><strong>$11.3M</strong></td><td><strong>$18.0M</strong></td></tr>
+            <tr style="background: rgba(201,169,97,0.05);"><td><strong>Net to Producers (After Fees)</strong></td><td>$4.0M</td><td>$6.8M</td><td>$10.8M</td></tr>
+            <tr style="background: rgba(201,169,97,0.08);"><td><strong>ROI on $2.1M Net Budget</strong></td><td><strong>1.9x</strong></td><td><strong>3.2x</strong></td><td><strong>5.1x</strong></td></tr>
+        </tbody>
+    </table>
+    <div class="highlight-box">
+        <p class="body-text">Even in the <strong>conservative scenario</strong> (1.9x ROI), the film generates profit after recouping UK tax relief. The realistic scenario (3.2x ROI) aligns with recent comparable films like <em>Saint Maud</em>, <em>The Vigil</em>, and <em>Lady Macbeth</em>. Our projections are <strong>intentionally below outliers</strong> like <em>The Witch</em> (10.1x ROI).</p>
+    </div>
+    <div class="page-number">11</div>
+    <div class="footer">The Mercury Veil • Reelsage LLC</div>
+</div>
+
+<!-- PAGE 12: CONTACT & CLOSING -->
+<div class="page">
+    <h2 class="section-header">Contact</h2>
+    
+    <div class="contact-box">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="ayla.jpeg" alt="Ayla Demirci" style="width: 250px; height: 300px; border-radius: 12px; object-fit: cover; border: 3px solid #1a1a1a; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+        <h3>Ayla Demirci</h3>
+        <div class="contact-item">Writer • Actress • Producer</div>
+        <div class="contact-item" style="margin-top: 25px;">📧 aylamahree@gmail.com</div>
+        <div class="contact-item">📱 +1 (615) 485-5008</div>
+        <div class="contact-item" style="margin-top: 25px;">🎬 Reelsage LLC</div>
+        <div class="contact-item">Nashville, Tennessee, USA</div>
+        <div class="contact-item" style="margin-top: 25px; font-size: 0.95em;">WGA East Registration: #I381100</div>
+    </div>
+    
+    <div class="highlight-box" style="margin-top: 40px;">
+        <p class="body-text" style="text-align: center; font-size: 1.1em;">
+            <strong>Additional Materials Available:</strong><br>
+            Preliminary production breakdown • UK tax relief research<br>
+            Budget estimates • Character breakdown • Visual references
+        </p>
+    </div>
+    
+    <p class="body-text" style="text-align: center; margin-top: 50px; font-size: 1.05em;">
+        Thank you for considering <em>The Mercury Veil</em> for production partnership.<br>
+        We look forward to the possibility of bringing this story to life together.
+    </p>
+    
+    <p class="body-text" style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #888;">
+        © 2025 Reelsage LLC. All Rights Reserved.<br>
+        This document is confidential and intended solely for the use of the recipient.<br>
+        Unauthorized distribution or reproduction is prohibited.
+    </p>
+    
+    <div class="page-number">13</div>
+</div>
+
+</div>
+
+</body>
+</html>
